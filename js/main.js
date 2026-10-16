@@ -211,13 +211,6 @@
     loop();
   }
 
-  /* ---------- inclinaison du diorama à la souris ---------- */
-  function tilt() {
-    const card = $(".dio-card"), host = $(".hero"); if (!card || reduce || matchMedia("(pointer:coarse)").matches) return;
-    host.addEventListener("pointermove", e => { const r = host.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5; card.style.transform = `rotateY(${-14 + px * 8}deg) rotateX(${6 - py * 6}deg)`; });
-    host.addEventListener("pointerleave", () => card.style.transform = "");
-  }
-
   /* ---------- démarrage ---------- */
   applyLang();
   fetch("assets/data.json").then(r => r.json()).then(d => {
@@ -225,5 +218,5 @@
     if (!reduce) setInterval(tickSprites, 170);
   });
   if (!reduce) embers();
-  tilt(); loadCount();
+  loadCount();
 })();
