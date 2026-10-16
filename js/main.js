@@ -10,6 +10,18 @@
 
   /* ---------- i18n : l'anglais est dans le HTML (langue par défaut), le français ici ---------- */
   const FR = {
+    "chap.u": "Unys",
+    "chap.s": "Sinnoh",
+    "chap.h": "Hoenn",
+    "chap.j": "Johto",
+    "chap.lock": "Verrouillé",
+    "chap.k.st": "Ouvert",
+    "chap.k.sub": "Six cartes, jusqu’à Mewtwo et Mew",
+    "chap.k": "Kanto",
+    "chap.here": "▼ En développement",
+    "chap.lead": "PokéSouls se raconte en cinq chapitres, un par région. Le chapitre 1 est en cours de création. Les quatre autres restent verrouillés jusqu’à leur tour.",
+    "chap.title": "Un chapitre par région",
+    "nav.chapters": "Chapitres",
     "skip": "Aller à l’inscription",
     "notice": "Projet de fan gratuit. On ne te demandera jamais de payer, de télécharger un fichier ou de te connecter.",
     "nav.game": "Le jeu",
@@ -22,7 +34,7 @@
     "hero.h1b": "avec trois Pokémon.",
     "hero.lead": "Un action-RPG souls-like en HD-2D. Tu mènes une équipe de trois, tu meurs, tu apprends, et tu avances jusqu’au sanctuaire de Mewtwo.",
     "form.label": "Ton adresse email",
-    "form.submit": "Me prévenir au lancement",
+    "form.submit": "Rejoindre la liste",
     "form.fine": "Un seul email, à la sortie. Pas de spam, désinscription en un clic. <a href=\"privacy.html\">Confidentialité</a>",
     "cta.teasers": "Voir les teasers",
     "facts.a": "lignées jouables",
@@ -40,7 +52,7 @@
     "f4.t": "L’évolution se mérite",
     "f4.p": "Pas d’évolution automatique à chaque niveau. Elle est rare, spectaculaire, et elle change la façon de jouer ton Pokémon.",
     "boss.title": "Six cartes, six gardiens",
-    "boss.lead": "Chaque carte se referme autour d’un sanctuaire. Chaque boss a son univers, ses phases et ses pièges.",
+    "boss.lead": "Chaque carte se referme autour d’un sanctuaire. Regarde ce qui se passe quand tu y entres.",
     "boss.1": "Îles Écume",
     "boss.2": "Centrale abandonnée",
     "boss.3": "Mont Braise",
@@ -63,7 +75,7 @@
     "trio.submit": "Enregistrer mon trio",
     "about.title": "Un projet de fan, fait pour les fans",
     "about.p1": "PokéSouls est un fan game non commercial, développé par un seul passionné qui a grandi avec Pokémon et qui meurt avec plaisir dans les souls-likes.",
-    "about.p2": "Une version de développement est déjà jouable. Elle évolue chaque semaine : nouveaux Pokémon, nouveaux boss, nouveaux effets.",
+    "about.p2": "Le jeu est en plein développement. De nouveaux Pokémon, boss et effets arrivent chaque semaine, et les teasers sortent d’abord sur Instagram.",
     "join.title": "Sois dans la première vague",
     "join.lead": "Laisse ton email. Tu recevras un message à la sortie, et les inscrits jouent en premier.",
     "scam.title": "Attention aux copies",
@@ -209,6 +221,15 @@
     new IntersectionObserver(([e]) => { run = e.isIntersecting; if (run) loop(); }).observe(c);
     function loop() { if (!run) return; x.clearRect(0, 0, w, h); for (const p of ps) { p.y -= p.v; p.x += p.dx + Math.sin(p.y / 40 + p.ph) * .3; if (p.y < -10) Object.assign(p, mk(false)); x.beginPath(); x.fillStyle = `rgba(255,${150 + (p.r * 30) | 0},60,${p.a * Math.min(1, p.y / h + .2)})`; x.shadowColor = "#ff8a2a"; x.shadowBlur = 10; x.arc(p.x, p.y, p.r, 0, 7); x.fill(); } requestAnimationFrame(loop); }
     loop();
+  }
+
+
+  /* ---------- clips : lecture seulement quand ils sont visibles ---------- */
+  const clips = $$("video[data-clip]");
+  if (reduce) clips.forEach(v => { v.controls = true; });
+  else if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting) { v.play().catch(() => {}); } else v.pause(); }), { rootMargin: "80px", threshold: 0.2 });
+    clips.forEach(v => io.observe(v));
   }
 
   /* ---------- démarrage ---------- */

@@ -26,13 +26,13 @@
   <a class="brand" href="#top" aria-label="PokéSouls">Poké<span>Souls</span></a>
   <nav class="nav-links" aria-label="Main">
     <a href="#game" data-i18n="nav.game">The game</a>
+    <a href="#chapters" data-i18n="nav.chapters">Chapters</a>
     <a href="#bosses" data-i18n="nav.bosses">Bosses</a>
     <a href="#team" data-i18n="nav.team">Your team</a>
     <a href="#about" data-i18n="nav.about">About</a>
   </nav>
   <div class="nav-end">
     <button class="lang" type="button" id="lang" aria-label="Switch language">FR</button>
-    <a class="btn btn-ghost nav-play" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
     <a class="btn btn-solid" href="#join" data-i18n="cta.join">Join the list</a>
   </div>
 </header>
@@ -52,7 +52,7 @@
         <div class="field">
           <input id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-i18n-ph="form.ph" required>
           <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn btn-solid" type="submit" data-i18n="form.submit">Tell me at launch</button>
+          <button class="btn btn-solid" type="submit" data-i18n="form.submit">Join the list</button>
         </div>
         <p class="fine" data-i18n-html="form.fine">One email, at release. No spam, one-click unsubscribe. <a href="privacy.html">Privacy</a></p>
         <p class="status" role="status" aria-live="polite"></p>
@@ -61,7 +61,6 @@
       <p class="count" data-count hidden></p>
 
       <div class="hero-links">
-        <a class="btn btn-ghost" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener" data-i18n="cta.teasers">Watch the teasers</a>
       </div>
     </div>
@@ -69,12 +68,8 @@
     <div class="diorama">
       <img class="key-art" src="assets/img/logo.webp" alt="PokéSouls logo: an armored Mewtwo holding a sword upright in front of its chest" width="1200" height="1200" fetchpriority="high">
       <div class="dio-card" aria-hidden="true">
-        <img src="assets/img/shot-volcano.webp" alt="" width="1280" height="720">
+        <video class="clip" data-clip src="assets/clips/hero.mp4" poster="assets/clips/hero.jpg" muted loop playsinline preload="none"></video>
         <span class="dio-glow"></span>
-        <div class="dio-sprites">
-          <span class="spr" data-spr="charmander" data-scale="4"></span>
-          <span class="spr" data-spr="mewtwo" data-scale="4"></span>
-        </div>
       </div>
     </div>
   </div>
@@ -101,7 +96,7 @@
         <h3 data-i18n="f1.t">Every death makes sense</h3>
         <p data-i18n="f1.p">Enemy attacks are announced by a circle on the ground. Dodge at the last second, parry, riposte. No cheap hits, no inflated HP faking difficulty.</p>
       </div>
-      <figure class="shot"><img src="assets/img/shot-ice.webp" alt="Charmander explores the Foam Islands, an icy HD-2D setting" width="1280" height="720" loading="lazy"></figure>
+      <figure class="shot"><video class="clip" data-clip src="assets/clips/combat.mp4" poster="assets/clips/combat.jpg" muted loop playsinline preload="none" aria-label="Gameplay: fighting enemies on the Foam Islands, dodging telegraphed attacks"></video></figure>
     </article>
 
     <article class="feat flip" style="--tint:#f0a53c">
@@ -109,7 +104,7 @@
         <h3 data-i18n="f2.t">Three Pokémon, one on the field</h3>
         <p data-i18n="f2.p">Switch whenever you want. Right after a perfect dodge, the incoming Pokémon fires a free entry attack, and elemental marks make enemies react: Grass then Fire gives Blaze, Fire then Water gives Steam.</p>
       </div>
-      <figure class="shot"><img src="assets/img/shot-team.webp" alt="Team select screen: 39 lineages split into four combat styles" width="1280" height="720" loading="lazy"></figure>
+      <figure class="shot"><video class="clip" data-clip src="assets/clips/relay.mp4" poster="assets/clips/relay.jpg" muted loop playsinline preload="none" aria-label="Gameplay: switching Pokémon right after a dodge to trigger an entry attack"></video></figure>
     </article>
 
     <article class="feat" style="--tint:#ffd23f">
@@ -117,7 +112,7 @@
         <h3 data-i18n="f3.t">A world that closes in on you</h3>
         <p data-i18n="f3.p">Six large maps, shortcuts that open behind you, a bonfire every ten to fifteen minutes. When a boss falls, its world changes.</p>
       </div>
-      <figure class="shot"><img src="assets/img/shot-turbines.webp" alt="The abandoned power plant lit by yellow neon" width="1280" height="720" loading="lazy"></figure>
+      <figure class="shot"><video class="clip" data-clip src="assets/clips/explore.mp4" poster="assets/clips/explore.jpg" muted loop playsinline preload="none" aria-label="Gameplay: running through the abandoned power plant and lighting a bonfire"></video></figure>
     </article>
 
     <article class="feat flip" style="--tint:#ff7a30">
@@ -125,8 +120,40 @@
         <h3 data-i18n="f4.t">Evolution is earned</h3>
         <p data-i18n="f4.p">No automatic evolution every level. It is rare, spectacular, and it changes how you play your Pokémon.</p>
       </div>
-      <figure class="shot"><img src="assets/img/shot-volcano.webp" alt="The volcano flank, lava rivers and embers" width="1280" height="720" loading="lazy"></figure>
+      <figure class="shot"><video class="clip" data-clip src="assets/clips/evolve.mp4" poster="assets/clips/evolve.jpg" muted loop playsinline preload="none" aria-label="Gameplay: a Pokémon evolving on the volcano map"></video></figure>
     </article>
+  </div>
+</section>
+
+<!-- CHAPITRES -->
+<section class="sec chapters" id="chapters">
+  <div class="wrap">
+    <div class="chap-head">
+      <div>
+        <h2 class="sec-title" data-i18n="chap.title">One region per chapter</h2>
+        <p class="sec-lead tall-serif" data-i18n="chap.lead">PokéSouls is told in five chapters, one for each region. Chapter 1 is being built now. The other four stay locked until their turn.</p>
+      </div>
+      <p class="chap-count" aria-label="1 of 5 chapters open"><span class="dia on"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><b>1 / 5</b></p>
+    </div>
+    <ol class="chap-grid">
+      <li class="chap open">
+        <p class="chap-here" data-i18n="chap.here">▼ In development</p>
+        <div class="chap-card" style="--px:url(../assets/img/chap1-px.png)">
+          <span class="spr" data-spr="mewtwo" data-scale="4" aria-hidden="true"></span>
+          <div class="chap-body">
+            <p class="chap-n">Chapter I</p>
+            <h3 data-i18n="chap.k">Kanto</h3>
+            <p class="chap-sub" data-i18n="chap.k.sub">Six maps, ending with Mewtwo and Mew</p>
+            <p class="chap-dias" aria-hidden="true"><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span></p>
+            <p class="chap-status" data-i18n="chap.k.st">Open</p>
+          </div>
+        </div>
+      </li>
+      <li class="chap locked"><div class="chap-card"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter II</p><h3 data-i18n="chap.j">Johto</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
+      <li class="chap locked"><div class="chap-card"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter III</p><h3 data-i18n="chap.h">Hoenn</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
+      <li class="chap locked"><div class="chap-card"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter IV</p><h3 data-i18n="chap.s">Sinnoh</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
+      <li class="chap locked"><div class="chap-card"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter V</p><h3 data-i18n="chap.u">Unova</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
+    </ol>
   </div>
 </section>
 
@@ -134,14 +161,14 @@
 <section class="sec bosses" id="bosses">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="boss.title">Six maps, six guardians</h2>
-    <p class="sec-lead" data-i18n="boss.lead">Each map closes in around a sanctuary. Each boss has its own universe, phases and traps.</p>
+    <p class="sec-lead" data-i18n="boss.lead">Each map closes in around a sanctuary. Watch what happens when you walk in.</p>
     <ul class="boss-grid">
-      <li class="boss" style="--tint:#5fb4ff;--bg:url(../assets/img/shot-ice.webp)"><span class="spr" data-spr="articuno" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.1">Articuno</h3><p data-i18n="boss.1">Foam Islands</p></li>
-      <li class="boss" style="--tint:#ffd23f;--bg:url(../assets/img/shot-turbines.webp)"><span class="spr" data-spr="zapdos" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.2">Zapdos</h3><p data-i18n="boss.2">Abandoned Power Plant</p></li>
-      <li class="boss" style="--tint:#ff7a30;--bg:url(../assets/img/shot-volcano.webp)"><span class="spr" data-spr="moltres" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.3">Moltres</h3><p data-i18n="boss.3">Mount Ember</p></li>
-      <li class="boss" style="--tint:#c9a46a;--bg:url(../assets/img/shot-road.webp)"><span class="spr" data-spr="dragonite" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.4">Dragonite</h3><p data-i18n="boss.4">Victory Road</p></li>
-      <li class="boss" style="--tint:#7a7cff;--bg:url(../assets/img/shot-lab.webp)"><span class="spr" data-spr="mewtwo" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.5">Mewtwo</h3><p data-i18n="boss.5">Forgotten Lab</p></li>
-      <li class="boss" style="--tint:#3fd0a0;--bg:url(../assets/img/shot-beach.webp)"><span class="spr" data-spr="mew" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.6">Mew</h3><p data-i18n="boss.6">Mystery Island</p></li>
+      <li class="boss" style="--tint:#5fb4ff"><video class="clip" data-clip src="assets/clips/boss0.mp4" poster="assets/clips/boss0.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Articuno awakens"></video><div class="boss-text"><h3 data-i18n="bn.1">Articuno</h3><p data-i18n="boss.1">Foam Islands</p></div></li>
+      <li class="boss" style="--tint:#ffd23f"><video class="clip" data-clip src="assets/clips/boss1.mp4" poster="assets/clips/boss1.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Zapdos awakens"></video><div class="boss-text"><h3 data-i18n="bn.2">Zapdos</h3><p data-i18n="boss.2">Abandoned Power Plant</p></div></li>
+      <li class="boss" style="--tint:#ff7a30"><video class="clip" data-clip src="assets/clips/boss2.mp4" poster="assets/clips/boss2.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Moltres awakens"></video><div class="boss-text"><h3 data-i18n="bn.3">Moltres</h3><p data-i18n="boss.3">Mount Ember</p></div></li>
+      <li class="boss" style="--tint:#c9a46a"><video class="clip" data-clip src="assets/clips/boss3.mp4" poster="assets/clips/boss3.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Dragonite awakens"></video><div class="boss-text"><h3 data-i18n="bn.4">Dragonite</h3><p data-i18n="boss.4">Victory Road</p></div></li>
+      <li class="boss" style="--tint:#7a7cff"><video class="clip" data-clip src="assets/clips/boss4.mp4" poster="assets/clips/boss4.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Mewtwo awakens"></video><div class="boss-text"><h3 data-i18n="bn.5">Mewtwo</h3><p data-i18n="boss.5">Forgotten Lab</p></div></li>
+      <li class="boss" style="--tint:#3fd0a0"><video class="clip" data-clip src="assets/clips/boss5.mp4" poster="assets/clips/boss5.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Mew awakens"></video><div class="boss-text"><h3 data-i18n="bn.6">Mew</h3><p data-i18n="boss.6">Mystery Island</p></div></li>
     </ul>
   </div>
 </section>
@@ -185,13 +212,12 @@
     <div>
       <h2 class="sec-title" data-i18n="about.title">A fan project, made for fans</h2>
       <p data-i18n="about.p1">PokéSouls is a non-commercial fan game built by one person who grew up with Pokémon and happily dies in souls-likes.</p>
-      <p data-i18n="about.p2">A development build is already playable. It changes every week: new Pokémon, new bosses, new effects.</p>
+      <p data-i18n="about.p2">The game is in active development. New Pokémon, bosses and effects land every week, and the teasers go up on Instagram first.</p>
       <div class="about-links">
-        <a class="btn btn-solid" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-solid" href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-    <figure class="shot tall"><img src="assets/img/shot-title.webp" alt="PokéSouls title screen: a bonfire and a sword planted in the ground" width="1280" height="720" loading="lazy"></figure>
+    <figure class="shot tall"><video class="clip" data-clip src="assets/clips/title.mp4" poster="assets/clips/title.jpg" muted loop playsinline preload="none" aria-label="PokéSouls title screen: a bonfire and a sword planted in the ground"></video></figure>
   </div>
 </section>
 
@@ -205,7 +231,7 @@
       <div class="field">
         <input id="email-join" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-i18n-ph="form.ph" required>
         <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn-solid" type="submit" data-i18n="form.submit">Tell me at launch</button>
+        <button class="btn btn-solid" type="submit" data-i18n="form.submit">Join the list</button>
       </div>
       <p class="fine" data-i18n-html="form.fine">One email, at release. No spam, one-click unsubscribe. <a href="privacy.html">Privacy</a></p>
       <p class="status" role="status" aria-live="polite"></p>
