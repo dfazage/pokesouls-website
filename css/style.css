@@ -235,3 +235,9 @@ h1{font:800 clamp(2.5rem,5.6vw,4.9rem)/1.04 var(--display);letter-spacing:.015em
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* carte secrète : silhouette, le contenu reste un mystère */
+.boss.secret .clip{filter:brightness(0) contrast(1.2);opacity:.85}
+.boss.secret h3{letter-spacing:.3em}
+.boss.secret{position:relative}
+.boss.secret::after{content:"?";position:absolute;left:0;right:0;top:0;aspect-ratio:16/9;display:grid;place-items:center;font:800 4.5rem/1 var(--display);color:var(--tint);opacity:.55;text-shadow:0 0 30px var(--tint);pointer-events:none}
