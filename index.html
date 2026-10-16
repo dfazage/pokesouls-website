@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PokéSouls: Dark Souls with three Pokémon</title>
+<meta name="description" content="Free fan game: a souls-like action RPG in HD-2D. Three Pokémon, six maps, Mewtwo at the end of the road. Join the list to hear first at launch.">
+<meta name="theme-color" content="#0b0a0c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PokéSouls: Dark Souls with three Pokémon">
+<meta property="og:description" content="Free fan game, souls-like action RPG in HD-2D. Join the list to hear first at launch.">
+<meta property="og:image" content="https://dfazage.github.io/pokesouls-website/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/cinzel-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#join" data-i18n="skip">Skip to sign-up</a>
+
+<p class="notice" data-i18n="notice">Free fan project. We will never ask you to pay, download a file or log in.</p>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="PokéSouls">Poké<span>Souls</span></a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#game" data-i18n="nav.game">The game</a>
+    <a href="#bosses" data-i18n="nav.bosses">Bosses</a>
+    <a href="#team" data-i18n="nav.team">Your team</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+  </nav>
+  <div class="nav-end">
+    <button class="lang" type="button" id="lang" aria-label="Switch language">FR</button>
+    <a class="btn btn-ghost nav-play" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
+    <a class="btn btn-solid" href="#join" data-i18n="cta.join">Join the list</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1><span data-i18n="hero.h1a">Dark Souls,</span><br><span data-i18n="hero.h1b">with three Pokémon.</span></h1>
+      <p class="lead" data-i18n="hero.lead">A souls-like action RPG in HD-2D. You lead a team of three, die, learn, and fight your way to Mewtwo's sanctuary.</p>
+
+      <form class="join" data-join novalidate>
+        <label class="sr" for="email-hero" data-i18n="form.label">Your email address</label>
+        <div class="field">
+          <input id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-i18n-ph="form.ph" required>
+          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-solid" type="submit" data-i18n="form.submit">Tell me at launch</button>
+        </div>
+        <p class="fine" data-i18n-html="form.fine">One email, at release. No spam, one-click unsubscribe. <a href="privacy.html">Privacy</a></p>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="count" data-count hidden></p>
+
+      <div class="hero-links">
+        <a class="btn btn-ghost" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener" data-i18n="cta.teasers">Watch the teasers</a>
+      </div>
+    </div>
+
+    <div class="diorama" aria-hidden="true">
+      <div class="dio-card">
+        <img src="assets/img/shot-volcano.webp" alt="" width="1280" height="720" fetchpriority="high">
+        <span class="dio-glow"></span>
+      </div>
+      <div class="dio-sprites">
+        <span class="spr" data-spr="charmander" data-scale="5"></span>
+        <span class="spr" data-spr="mewtwo" data-scale="5"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES -->
+<section class="facts" aria-label="The game in numbers">
+  <ul class="wrap">
+    <li><b>39</b><span data-i18n="facts.a">playable lineages</span></li>
+    <li><b>6</b><span data-i18n="facts.b">maps and six guardians</span></li>
+    <li><b>4</b><span data-i18n="facts.c">combat styles</span></li>
+    <li><b>1</b><span data-i18n="facts.d">legendary to take down</span></li>
+  </ul>
+</section>
+
+<!-- LE JEU -->
+<section class="sec" id="game">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="game.title">A souls-like that lets you learn</h2>
+    <p class="sec-lead" data-i18n="game.lead">Readable, punishing combat, Pokémon you actually care about, a hostile world. All playable in your browser.</p>
+
+    <article class="feat" style="--tint:#5fb4ff">
+      <div class="feat-text">
+        <h3 data-i18n="f1.t">Every death makes sense</h3>
+        <p data-i18n="f1.p">Enemy attacks are announced by a circle on the ground. Dodge at the last second, parry, riposte. No cheap hits, no inflated HP faking difficulty.</p>
+      </div>
+      <figure class="shot"><img src="assets/img/shot-ice.webp" alt="Charmander explores the Foam Islands, an icy HD-2D setting" width="1280" height="720" loading="lazy"></figure>
+    </article>
+
+    <article class="feat flip" style="--tint:#f0a53c">
+      <div class="feat-text">
+        <h3 data-i18n="f2.t">Three Pokémon, one on the field</h3>
+        <p data-i18n="f2.p">Switch whenever you want. Right after a perfect dodge, the incoming Pokémon fires a free entry attack, and elemental marks make enemies react: Grass then Fire gives Blaze, Fire then Water gives Steam.</p>
+      </div>
+      <figure class="shot"><img src="assets/img/shot-team.webp" alt="Team select screen: 39 lineages split into four combat styles" width="1280" height="720" loading="lazy"></figure>
+    </article>
+
+    <article class="feat" style="--tint:#ffd23f">
+      <div class="feat-text">
+        <h3 data-i18n="f3.t">A world that closes in on you</h3>
+        <p data-i18n="f3.p">Six large maps, shortcuts that open behind you, a bonfire every ten to fifteen minutes. When a boss falls, its world changes.</p>
+      </div>
+      <figure class="shot"><img src="assets/img/shot-turbines.webp" alt="The abandoned power plant lit by yellow neon" width="1280" height="720" loading="lazy"></figure>
+    </article>
+
+    <article class="feat flip" style="--tint:#ff7a30">
+      <div class="feat-text">
+        <h3 data-i18n="f4.t">Evolution is earned</h3>
+        <p data-i18n="f4.p">No automatic evolution every level. It is rare, spectacular, and it changes how you play your Pokémon.</p>
+      </div>
+      <figure class="shot"><img src="assets/img/shot-volcano.webp" alt="The volcano flank, lava rivers and embers" width="1280" height="720" loading="lazy"></figure>
+    </article>
+  </div>
+</section>
+
+<!-- BOSS -->
+<section class="sec bosses" id="bosses">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="boss.title">Six maps, six guardians</h2>
+    <p class="sec-lead" data-i18n="boss.lead">Each map closes in around a sanctuary. Each boss has its own universe, phases and traps.</p>
+    <ul class="boss-grid">
+      <li class="boss" style="--tint:#5fb4ff;--bg:url(../assets/img/shot-ice.webp)"><span class="spr" data-spr="articuno" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.1">Articuno</h3><p data-i18n="boss.1">Foam Islands</p></li>
+      <li class="boss" style="--tint:#ffd23f;--bg:url(../assets/img/shot-turbines.webp)"><span class="spr" data-spr="zapdos" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.2">Zapdos</h3><p data-i18n="boss.2">Abandoned Power Plant</p></li>
+      <li class="boss" style="--tint:#ff7a30;--bg:url(../assets/img/shot-volcano.webp)"><span class="spr" data-spr="moltres" data-scale="2.5" aria-hidden="true"></span><h3 data-i18n="bn.3">Moltres</h3><p data-i18n="boss.3">Mount Ember</p></li>
+      <li class="boss" style="--tint:#c9a46a;--bg:url(../assets/img/shot-road.webp)"><span class="spr" data-spr="dragonite" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.4">Dragonite</h3><p data-i18n="boss.4">Victory Road</p></li>
+      <li class="boss" style="--tint:#7a7cff;--bg:url(../assets/img/shot-lab.webp)"><span class="spr" data-spr="mewtwo" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.5">Mewtwo</h3><p data-i18n="boss.5">Forgotten Lab</p></li>
+      <li class="boss" style="--tint:#3fd0a0;--bg:url(../assets/img/shot-beach.webp)"><span class="spr" data-spr="mew" data-scale="4" aria-hidden="true"></span><h3 data-i18n="bn.6">Mew</h3><p data-i18n="boss.6">Mystery Island</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="sec" id="team">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="team.title">Build your team of three</h2>
+    <p class="sec-lead" data-i18n="team.lead">Four combat styles, no required composition. A Water Pokémon can hold the line, shoot from afar or heal.</p>
+
+    <ul class="gabs">
+      <li style="--tint:#ff9a70"><div class="stage"><span class="spr" data-spr="lucario" data-scale="4" aria-hidden="true"></span></div><h3 data-i18n="g.a">Assault</h3><p data-i18n="g.a.p">Fast melee, combos, backstabs.</p></li>
+      <li style="--tint:#7fd0ff"><div class="stage"><span class="spr" data-spr="blastoise" data-scale="4" aria-hidden="true"></span></div><h3 data-i18n="g.r">Bulwark</h3><p data-i18n="g.r.p">Guard, high poise, area control.</p></li>
+      <li style="--tint:#ffb13a"><div class="stage"><span class="spr" data-spr="charizard" data-scale="4" aria-hidden="true"></span></div><h3 data-i18n="g.d">Ranged</h3><p data-i18n="g.d.p">Shots, traps, area spells.</p></li>
+      <li style="--tint:#9cff8a"><div class="stage"><span class="spr" data-spr="venusaur" data-scale="4" aria-hidden="true"></span></div><h3 data-i18n="g.s">Support</h3><p data-i18n="g.s.p">Heals on entry, cleansing, aura.</p></li>
+    </ul>
+
+    <div class="trio" id="trio">
+      <div class="trio-head">
+        <h3 data-i18n="trio.t">What would your trio be?</h3>
+        <p data-i18n="trio.p">Pick three Pokémon. We look at which ones come up most to decide what to build next.</p>
+      </div>
+      <div class="picker" id="picker" role="group" aria-label="Your trio"></div>
+      <form class="join trio-form" data-join data-trio novalidate>
+        <p class="trio-count" aria-live="polite"><b id="trio-n">0</b> <span data-i18n="trio.of">of 3 picked</span><span id="trio-names"></span></p>
+        <label class="sr" for="email-trio" data-i18n="form.label">Your email address</label>
+        <div class="field">
+          <input id="email-trio" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-i18n-ph="form.ph" required>
+          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-solid" type="submit" data-i18n="trio.submit">Save my trio</button>
+        </div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="sec-title" data-i18n="about.title">A fan project, made for fans</h2>
+      <p data-i18n="about.p1">PokéSouls is a non-commercial fan game built by one person who grew up with Pokémon and happily dies in souls-likes.</p>
+      <p data-i18n="about.p2">A development build is already playable. It changes every week: new Pokémon, new bosses, new effects.</p>
+      <div class="about-links">
+        <a class="btn btn-solid" href="https://dfazage.github.io/pokesouls/" target="_blank" rel="noopener" data-i18n="cta.play">Play the demo</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <figure class="shot tall"><img src="assets/img/shot-title.webp" alt="PokéSouls title screen: a bonfire and a sword planted in the ground" width="1280" height="720" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- REJOINDRE -->
+<section class="sec final" id="join">
+  <div class="wrap">
+    <h2 data-i18n="join.title">Be in the first wave</h2>
+    <p class="sec-lead" data-i18n="join.lead">Leave your email. You will get one message at release, and people on the list play first.</p>
+    <form class="join center" data-join novalidate>
+      <label class="sr" for="email-join" data-i18n="form.label">Your email address</label>
+      <div class="field">
+        <input id="email-join" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-i18n-ph="form.ph" required>
+        <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-solid" type="submit" data-i18n="form.submit">Tell me at launch</button>
+      </div>
+      <p class="fine" data-i18n-html="form.fine">One email, at release. No spam, one-click unsubscribe. <a href="privacy.html">Privacy</a></p>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ATTENTION -->
+<section class="sec scam">
+  <div class="wrap narrow">
+    <h2 data-i18n="scam.title">Beware of copies</h2>
+    <p data-i18n-html="scam.p">The only official account is <a href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener">@pokesouls.fun</a> on Instagram. PokéSouls is free: nobody will ask you to pay, download an executable or log in with your account.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="brand small">Poké<span>Souls</span></p>
+    <p data-i18n="foot.disc">Non-commercial fan game, not affiliated with Nintendo, Creatures Inc. or GAME FREAK inc. Pokémon and its characters are their trademarks.</p>
+    <p data-i18n="foot.cred">Sprites: PMD SpriteCollab (CC BY-NC 4.0), thanks to all its artists.</p>
+    <p><a href="privacy.html" data-i18n="foot.priv">Privacy</a> · <a href="https://www.instagram.com/pokesouls.fun/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
