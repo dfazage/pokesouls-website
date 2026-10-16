@@ -34,6 +34,8 @@ a:hover{color:#ffc16a}
 .nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:28px;padding:14px var(--gutter);background:linear-gradient(var(--ash) 30%,rgba(12,10,16,0));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .brand{font:800 1.35rem/1 var(--display);letter-spacing:.12em;color:var(--bone);text-decoration:none;white-space:nowrap}
 .brand span{color:var(--ember)}
+.brand img{display:block;height:46px;width:auto}
+.brand.small img{height:40px}
 .brand.small{font-size:1.1rem;margin:0 0 12px}
 .nav-links{display:flex;gap:26px;margin-left:12px}
 .nav-links a{color:var(--fog);text-decoration:none;font-weight:600;font-size:.95rem}
@@ -78,8 +80,7 @@ h1{font:800 clamp(2.5rem,5.6vw,4.9rem)/1.04 var(--display);letter-spacing:.015em
 
 /* hero : le logo en visuel principal, la vraie capture du jeu par-dessus */
 .diorama{position:relative;padding:0 0 clamp(40px,8vw,96px)}
-.key-art{width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px;-webkit-mask-image:radial-gradient(closest-side,#000 74%,transparent 100%);mask-image:radial-gradient(closest-side,#000 74%,transparent 100%);filter:drop-shadow(0 0 70px rgba(154,115,255,.28))}
-.dio-card{position:absolute;left:-6%;bottom:0;width:62%;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 1px var(--line),0 0 60px -10px rgba(255,106,31,.45);transform:rotate(-2.5deg);animation:float 7s ease-in-out infinite;transition:transform .25s ease-out}
+.dio-card{position:relative;width:100%;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 1px var(--line),0 0 80px -10px rgba(255,106,31,.45)}
 .dio-card .clip{aspect-ratio:16/10}
 .dio-glow{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 40%,rgba(255,106,31,.16));pointer-events:none}
 .dio-sprites{position:absolute;left:6%;right:6%;bottom:2%;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none}
@@ -221,7 +222,7 @@ h1{font:800 clamp(2.5rem,5.6vw,4.9rem)/1.04 var(--display);letter-spacing:.015em
   .field{flex-direction:column;padding:8px}
   .field input[type=email]{padding:14px 12px}
   .boss-grid{grid-template-columns:1fr}
-  .dio-card{left:0;width:72%}
+  
   .dio-sprites .spr{zoom:.55}
   .gabs{gap:10px}
   .gabs li{padding:18px 10px}

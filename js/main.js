@@ -30,9 +30,9 @@
     "nav.about": "À propos",
     "cta.play": "Jouer à la démo",
     "cta.join": "Rejoindre la liste",
-    "hero.h1a": "Dark Souls,",
-    "hero.h1b": "avec trois Pokémon.",
-    "hero.lead": "Un action-RPG souls-like en HD-2D. Tu mènes une équipe de trois, tu meurs, tu apprends, et tu avances jusqu’au sanctuaire de Mewtwo.",
+    "hero.h1a": "Une aventure",
+    "hero.h1b": "Pokémon souls-like.",
+    "hero.lead": "Tu mènes une équipe de trois, tu meurs, tu apprends, et tu avances jusqu’au sanctuaire secret.",
     "form.label": "Ton adresse email",
     "form.submit": "Rejoindre la liste",
     "form.fine": "Un seul email, à la sortie. Pas de spam, désinscription en un clic. <a href=\"privacy.html\">Confidentialité</a>",
@@ -40,7 +40,7 @@
     "facts.a": "lignées jouables",
     "facts.b": "cartes et six gardiens",
     "facts.c": "gabarits de combat",
-    "facts.d": "légendaire à abattre",
+    "facts.d": "boss final à abattre",
     "game.title": "Un souls-like qui te laisse apprendre",
     "game.lead": "Un combat lisible et punitif, des Pokémon auxquels tu tiens, un monde hostile. Tout est jouable dans ton navigateur.",
     "f1.t": "Chaque mort s’explique",
@@ -125,7 +125,7 @@
     $$("[data-i18n-html]").forEach(e => { e.innerHTML = lang === "fr" && FR[e.dataset.i18nHtml] != null ? FR[e.dataset.i18nHtml] : e.dataset.en; });
     $$("[data-i18n-ph]").forEach(e => { e.placeholder = lang === "fr" ? FR[e.dataset.i18nPh] : e.dataset.en; });
     $("#lang").textContent = lang === "fr" ? "EN" : "FR";
-    document.title = lang === "fr" ? "PokéSouls : Dark Souls avec trois Pokémon" : "PokéSouls: Dark Souls with three Pokémon";
+    document.title = lang === "fr" ? "PokéSouls : une aventure Pokémon souls-like" : "PokéSouls: a souls-like Pokémon adventure";
     updateCount(); updateTrioUi();
   }
   $("#lang").addEventListener("click", () => { lang = lang === "fr" ? "en" : "fr"; store.set("ps_lang", lang); applyLang(); });
