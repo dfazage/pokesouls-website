@@ -16,7 +16,7 @@
     "chap.j": "Johto",
     "chap.lock": "Verrouillé",
     "chap.k.st": "Ouvert",
-    "chap.k.sub": "Six cartes, jusqu’à Mewtwo et Mew",
+    "chap.k.sub": "Quatre cartes et un secret, jusqu’à Mewtwo",
     "chap.k": "Kanto",
     "chap.here": "▼ En développement",
     "chap.lead": "PokéSouls se raconte en cinq chapitres, un par région. Le chapitre 1 est en cours de création. Les quatre autres restent verrouillés jusqu’à leur tour.",
@@ -38,7 +38,7 @@
     "form.fine": "Un seul email, à la sortie. Pas de spam, désinscription en un clic. <a href=\"privacy.html\">Confidentialité</a>",
     "cta.teasers": "Voir les teasers",
     "facts.a": "lignées jouables",
-    "facts.b": "cartes et six gardiens",
+    "facts.b": "cartes, dont une secrète",
     "facts.c": "gabarits de combat",
     "facts.d": "boss final à abattre",
     "game.title": "Un souls-like qui te laisse apprendre",
@@ -51,14 +51,13 @@
     "f3.p": "Vitamines, super bonbons et CT te permettent d’affiner chaque Pokémon : plus de dégâts ici, plus de PV là, une nouvelle capacité adaptée à son type. Même équipe, builds très différents.",
     "f4.t": "L’évolution se mérite",
     "f4.p": "Pas d’évolution automatique à chaque niveau. Elle est rare, spectaculaire, et elle change la façon de jouer ton Pokémon.",
-    "boss.title": "Six cartes, six gardiens",
+    "boss.title": "Quatre cartes, quatre gardiens, un secret",
     "boss.lead": "Chaque carte se referme autour d’un sanctuaire. Regarde ce qui se passe quand tu y entres.",
     "boss.1": "Îles Écume",
     "boss.2": "Centrale abandonnée",
     "boss.3": "Mont Braise",
-    "boss.4": "Route Victoire",
-    "boss.5": "Laboratoire oublié",
-    "boss.6": "Île Mystère",
+    "boss.4": "Laboratoire oublié",
+    "boss.5": "Carte secrète. Bats Mewtwo pour la trouver.",
     "team.title": "Compose ton équipe de trois",
     "team.lead": "Quatre gabarits de combat, aucune composition imposée. Un Pokémon Eau peut tenir la ligne, tirer de loin ou soigner.",
     "g.a": "Assaut",
@@ -87,9 +86,8 @@
     "bn.1": "Artikodin",
     "bn.2": "Électhor",
     "bn.3": "Sulfura",
-    "bn.4": "Dracolosse",
-    "bn.5": "Mewtwo",
-    "bn.6": "Mew"
+    "bn.4": "Mewtwo",
+    "bn.5": "???"
 };
   const MSG = {
     en: {
