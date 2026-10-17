@@ -84,7 +84,7 @@
     "join.title": "Sois dans la première vague",
     "join.lead": "Laisse ton email. Tu recevras un message à la sortie, et les inscrits jouent en premier.",
     "scam.title": "Attention aux copies",
-    "scam.p": "Le seul compte officiel est <a href=\"https://www.instagram.com/pokesouls.fun/\" target=\"_blank\" rel=\"noopener\">@pokesouls.fun</a> sur Instagram. PokéSouls est gratuit : personne ne te demandera de payer, de télécharger un exécutable ou de te connecter avec ton compte.",
+    "scam.p": "Le seul compte officiel est <a href=\"https://www.instagram.com/pokesouls.fun/\" target=\"_blank\" rel=\"noopener\">@pokesouls.fun</a> sur Instagram. PokéSouls est gratuit : personne ne te demandera de payer.",
     "foot.disc": "Fan game non commercial, non affilié à Nintendo, Creatures Inc. ni GAME FREAK inc. Pokémon et ses personnages sont leurs marques.",
     "foot.cred": "Sprites : PMD SpriteCollab (CC BY-NC 4.0), merci à tous ses artistes.",
     "foot.priv": "Confidentialité",
