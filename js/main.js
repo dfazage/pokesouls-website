@@ -29,7 +29,7 @@
     "chap.title": "Un chapitre par région",
     "nav.chapters": "Chapitres",
     "skip": "Aller à l’inscription",
-    "notice": "Projet de fan gratuit. On ne te demandera jamais de payer, de télécharger un fichier ou de te connecter.",
+    "notice": "Projet de fan gratuit. On ne te demandera jamais de payer.",
     "nav.game": "Le jeu",
     "nav.bosses": "Les boss",
     "nav.team": "L’équipe",
