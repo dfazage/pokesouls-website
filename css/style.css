@@ -151,6 +151,11 @@ h1{font:800 clamp(2.5rem,5.6vw,4.9rem)/1.04 var(--display);letter-spacing:.015em
 .boss-text{padding:16px 18px 18px;border-top:2px solid var(--tint)}
 .boss h3{font:800 1.35rem/1.15 var(--display);margin:0}
 .boss p{margin:3px 0 0;color:#d3cbb9;font-size:.95rem}
+.boss-sub{font:800 1.25rem/1.2 var(--display);letter-spacing:.04em;margin:clamp(40px,6vw,72px) 0 18px;color:var(--bone)}
+.boss.soon{opacity:.75}
+.boss.soon:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.soon-box{aspect-ratio:16/9;display:grid;place-items:center;background:repeating-conic-gradient(#191420 0 25%,#110e17 0 50%) 0 0/8px 8px}
+.soon-box svg{width:30px;height:30px;fill:none;stroke:var(--fog);stroke-width:1.6;opacity:.8}
 
 /* gabarits */
 .gabs{list-style:none;margin:0 0 clamp(56px,8vw,96px);padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
