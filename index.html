@@ -78,7 +78,7 @@
 <section class="facts" aria-label="The game in numbers">
   <ul class="wrap">
     <li><b>39</b><span data-i18n="facts.a">playable lineages</span></li>
-    <li><b>4+1</b><span data-i18n="facts.b">maps, one of them secret</span></li>
+    <li><b>4+1</b><span data-i18n="facts.b">maps per chapter, one of them secret</span></li>
     <li><b>4</b><span data-i18n="facts.c">combat styles</span></li>
     <li><b>1</b><span data-i18n="facts.d">final boss to take down</span></li>
   </ul>
@@ -130,25 +130,37 @@
     <div class="chap-head">
       <div>
         <h2 class="sec-title" data-i18n="chap.title">One region per chapter</h2>
-        <p class="sec-lead tall-serif" data-i18n="chap.lead">PokéSouls is told in five chapters, one for each region. Chapter 1 is being built now. The other four stay locked until their turn.</p>
+        <p class="sec-lead tall-serif" data-i18n="chap.lead">PokéSouls is told in five chapters, one for each region. Kanto is playable, Johto is being built now. The other three stay locked until their turn.</p>
       </div>
-      <p class="chap-count" aria-label="1 of 5 chapters open"><span class="dia on"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><b>1 / 5</b></p>
+      <p class="chap-count" aria-label="2 of 5 chapters open"><span class="dia on"></span><span class="dia on"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><b>2 / 5</b></p>
     </div>
     <ol class="chap-grid">
       <li class="chap open">
-        <p class="chap-here" data-i18n="chap.here">▼ In development</p>
+        <p class="chap-here" data-i18n="chap.here.k">▼ Playable</p>
         <div class="chap-card" style="--px:url(../assets/img/chap1-px.png)">
           <span class="spr" data-spr="mewtwo" data-scale="4" aria-hidden="true"></span>
           <div class="chap-body">
             <p class="chap-n">Chapter I</p>
             <h3 data-i18n="chap.k">Kanto</h3>
             <p class="chap-sub" data-i18n="chap.k.sub">Four maps and a secret, ending with Mewtwo</p>
-            <p class="chap-dias" aria-hidden="true"><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span></p>
+            <p class="chap-dias" aria-hidden="true"><span class="dia on"></span><span class="dia on"></span><span class="dia on"></span><span class="dia on"></span><span class="dia on"></span></p>
             <p class="chap-status" data-i18n="chap.k.st">Open</p>
           </div>
         </div>
       </li>
-      <li class="chap locked"><div class="chap-card"><img class="sil" src="assets/img/sil-lugia.png" alt="" aria-hidden="true" loading="lazy"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter II</p><h3 data-i18n="chap.j">Johto</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
+      <li class="chap open">
+        <p class="chap-here" data-i18n="chap.here">▼ In development</p>
+        <div class="chap-card" style="--px:linear-gradient(180deg,#2a1226 0%,#6b2a3a 46%,#c9663c 78%,#2a1a24 100%)">
+          <img class="sil" src="assets/img/sil-lugia.png" alt="" aria-hidden="true">
+          <div class="chap-body">
+            <p class="chap-n">Chapter II</p>
+            <h3 data-i18n="chap.j">Johto</h3>
+            <p class="chap-sub" data-i18n="chap.j.sub">Edo-era Japan, three guardians and Lugia</p>
+            <p class="chap-dias" aria-hidden="true"><span class="dia on"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span><span class="dia"></span></p>
+            <p class="chap-status" data-i18n="chap.j.st">First map playable</p>
+          </div>
+        </div>
+      </li>
       <li class="chap locked"><div class="chap-card"><img class="sil" src="assets/img/sil-rayquaza.png" alt="" aria-hidden="true" loading="lazy"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter III</p><h3 data-i18n="chap.h">Hoenn</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
       <li class="chap locked"><div class="chap-card"><img class="sil" src="assets/img/sil-giratina.png" alt="" aria-hidden="true" loading="lazy"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter IV</p><h3 data-i18n="chap.s">Sinnoh</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
       <li class="chap locked"><div class="chap-card"><img class="sil" src="assets/img/sil-kyurem.png" alt="" aria-hidden="true" loading="lazy"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="chap-body"><p class="chap-n">Chapter V</p><h3 data-i18n="chap.u">Unova</h3><p class="chap-status" data-i18n="chap.lock">Locked</p></div></div></li>
@@ -167,6 +179,12 @@
       <li class="boss" style="--tint:#ff7a30"><video class="clip" data-clip src="assets/clips/boss2.mp4" poster="assets/clips/boss2.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Moltres awakens"></video><div class="boss-text"><h3 data-i18n="bn.3">Moltres</h3><p data-i18n="boss.3">Mount Ember</p></div></li>
       <li class="boss" style="--tint:#7a7cff"><video class="clip" data-clip src="assets/clips/boss4.mp4" poster="assets/clips/boss4.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Mewtwo awakens"></video><div class="boss-text"><h3 data-i18n="bn.4">Mewtwo</h3><p data-i18n="boss.4">Forgotten Lab</p></div></li>
       <li class="boss secret" style="--tint:#3fd0a0"><img class="clip" src="assets/clips/boss5.jpg" alt="" aria-hidden="true" loading="lazy"><div class="boss-text"><h3 data-i18n="bn.5">???</h3><p data-i18n="boss.5">Secret map. Beat Mewtwo to find it.</p></div></li>
+    </ul>
+    <h3 class="boss-sub" data-i18n="boss.jt">Chapter II: Johto, first guardian</h3>
+    <ul class="boss-grid boss-grid-j">
+      <li class="boss" style="--tint:#ffce60"><video class="clip" data-clip src="assets/clips/boss6.mp4" poster="assets/clips/boss6.jpg" muted loop playsinline preload="none" aria-label="Intro cutscene: Raikou awakens in the Bell Tower"></video><div class="boss-text"><h3>Raikou</h3><p data-i18n="boss.6">Bell Tower</p></div></li>
+      <li class="boss soon" style="--tint:#ff7a30"><div class="soon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><div class="boss-text"><h3>Entei</h3><p data-i18n="boss.soon">In the making</p></div></li>
+      <li class="boss soon" style="--tint:#5fb4ff"><div class="soon-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><div class="boss-text"><h3>Suicune</h3><p data-i18n="boss.soon">In the making</p></div></li>
     </ul>
   </div>
 </section>
