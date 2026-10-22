@@ -246,3 +246,17 @@ h1{font:800 clamp(2.5rem,5.6vw,4.9rem)/1.04 var(--display);letter-spacing:.015em
 .boss.secret h3{letter-spacing:.3em}
 .boss.secret{position:relative}
 .boss.secret::after{content:"?";position:absolute;left:0;right:0;top:0;aspect-ratio:16/9;display:grid;place-items:center;font:800 4.5rem/1 var(--display);color:var(--tint);opacity:.55;text-shadow:0 0 30px var(--tint);pointer-events:none}
+
+/* v2 : deux gardiens, feuille de route */
+.boss-grid-2{grid-template-columns:repeat(2,1fr)}
+.boss-grid-2 .boss img.clip{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.boss-grid-2 .boss-text{padding:20px 22px 22px}
+.boss-place{font:800 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ember)!important;margin:4px 0 10px!important}
+.gabs{grid-template-columns:repeat(3,1fr)}
+.road{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.road li{padding:24px 22px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(var(--ash-2),var(--ash))}
+.road-k{margin:0 0 8px;font:800 .8rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+.road h3{font:800 1.25rem/1.25 var(--display);margin:0 0 8px}
+.road p:last-child{margin:0;color:#d3cbb9}
+@media (max-width:900px){.boss-grid-2,.road{grid-template-columns:1fr}.gabs{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.gabs{grid-template-columns:1fr}}
