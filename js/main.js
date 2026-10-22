@@ -117,7 +117,7 @@
 }
   };
   const COUNT = { en: n => `${n} trainers already on the list`, fr: n => `${n} dresseurs déjà inscrits` };
-  const GROUPS = { en: { A: "Assault", R: "Bulwark", D: "Ranged", S: "Support" }, fr: { A: "Assaut", R: "Rempart", D: "Distance", S: "Soutien" } };
+  const GROUPS = { en: { A: "Assault", R: "Bulwark", D: "Ranged" }, fr: { A: "Assaut", R: "Rempart", D: "Distance" } };
   let lang = store.get("ps_lang") === "fr" ? "fr" : "en";
   $$("[data-i18n]").forEach(e => e.dataset.en = e.textContent);
   $$("[data-i18n-html]").forEach(e => e.dataset.en = e.innerHTML);
@@ -150,7 +150,7 @@
   const picked = [];
   function buildPicker() {
     const box = $("#picker");
-    for (const g of ["A", "R", "D", "S"]) {
+    for (const g of ["A", "R", "D"]) {
       const h = document.createElement("p"); h.className = "pick-h"; h.dataset.g = g; box.appendChild(h);
       for (const [gab, key] of DATA.roster) if (gab === g) {
         const b = document.createElement("button"); b.type = "button"; b.className = "pick"; b.dataset.key = key; b.setAttribute("aria-pressed", "false");
